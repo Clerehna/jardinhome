@@ -1,0 +1,7 @@
+<%= simple_form_for(prestation) do |f| %>
+  <%= f.input :name, label:"Nom de la prestation" %>
+  <%= f.input :description, label: "Description de la prestation" %>
+  <%= f.input :price, label: "Prix de la prestation" %>
+  <%= f.input :category, label: "Catégorie de la prestation", as: :radio_buttons, :collection  => Prestation::CATEGORY, wrapper: :vertical_collection_inline %>
+  <%= f.submit "Valider" %>
+<% end %>

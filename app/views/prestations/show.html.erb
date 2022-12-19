@@ -1,5 +1,9 @@
 <div class="container">
-  <%= @prestation.name %>
-  <%= @prestation.description %>
-  <%= @prestation.price %>
+ <div class="card">
+  <%= prestation.name %>
+  <%= prestation.description %>
+  <%= prestation.price %>
+ </div>
+
+<%= link_to "Retour", prestations_path %>
 </div>
