@@ -2,10 +2,12 @@ class PrestationsController < ApplicationController
   before_action :set_prestation, only: %i[show]
 
   def index
+    authorize @prestation
     @prestations = Prestation.all
   end
 
   def show
+    authorize @prestation
   end
 
   def new
