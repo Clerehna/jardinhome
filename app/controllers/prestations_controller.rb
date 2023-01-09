@@ -3,7 +3,7 @@ class PrestationsController < ApplicationController
 
   def index
     @prestations = Prestation.all
-    authorize @prestations
+    @prestations = policy_scope(Prestation)
   end
 
   def show
