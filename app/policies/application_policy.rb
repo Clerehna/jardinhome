@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
 class ApplicationPolicy
-  attr_reader :user, :record
+  attr_reader :user, :prestation
 
-  def initialize(user, record)
+  def initialize(user, prestation)
     @user = user
-    @record = record
+    @prestation = prestation
   end
 
   def index?
-    false
+    true
   end
 
   def show?
-    false
+    true
   end
 
   def create?
@@ -26,6 +26,7 @@ class ApplicationPolicy
 
   def update?
     false
+    # user.admin? || !post.published?
   end
 
   def edit?
@@ -43,7 +44,7 @@ class ApplicationPolicy
     end
 
     def resolve
-      raise NotImplementedError, "You must define #resolve in #{self.class}"
+      # raise NotImplementedError, "You must define #resolve in #{self.class}"
     end
 
     private
