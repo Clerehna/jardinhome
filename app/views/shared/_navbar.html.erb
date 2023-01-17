@@ -10,12 +10,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <%# if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Accueil", "#", class: "nav-link" %>
+            <%= link_to "Accueil", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Entretien", "#", class: "nav-link" %>
+            <%= link_to "Entretien", prestations_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Réalisation", "#", class: "nav-link" %>
@@ -29,11 +28,6 @@
               <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
-        <%# else %>
-          <!--li class="nav-item"-->
-            <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-          <!--/li-->
-        <%# end %>
       </ul>
     </div>
   </div>
