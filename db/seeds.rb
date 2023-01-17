@@ -34,7 +34,6 @@ charlene = User.create!(
 )
 
 puts '1 new user 👩🏻'
-
 puts 'users created 🔥'
 puts '___________________________'
 puts 'creation of prestations 😊'
@@ -57,7 +56,7 @@ prestation_2 = Prestation.create!(
 
 prestation_3 = Prestation.create!(
   user: kevin,
-  name: 'Plantation/végétalisation',
+  name: 'Végétalisation',
   description: 'oergfhioêrh',
   category: 'Conception',
   price: 200

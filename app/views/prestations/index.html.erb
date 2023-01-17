@@ -6,11 +6,18 @@
       <a class="btn btn-flat" href="#">Devis</a>
     </div>
   </div>
-  <div class="cards">
-    <ul>
-      <% @prestations.each do |prestation| %>
-        <li><%= prestation.name %></li>
-      <% end %>
-    </ul>
+  <div class="row">
+    <% @prestations.each do |prestation| %>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h4><%= prestation.category %></h4>
+            <h5><%= prestation.name %></h5>
+            <p class="card-text"><%= prestation.description %></p>
+            <a class="btn btn-flat" href="#">Voir</a>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
