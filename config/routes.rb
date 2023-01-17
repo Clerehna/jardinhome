@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :prestations
+  root to: "prestations#index"
   resources :buyings, only: %i[index create new destroy]
 end
