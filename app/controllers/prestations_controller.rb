@@ -23,6 +23,11 @@ class PrestationsController < ApplicationController
     end
   end
 
+  def maintenance
+    @prestations = Prestation.all
+    @prestations = Prestation.where(category: 'Entretien')
+  end
+
   private
 
   def prestation_params
