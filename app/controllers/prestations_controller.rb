@@ -8,6 +8,7 @@ class PrestationsController < ApplicationController
 
   def show
     authorize @prestation
+    @prestations = policy_scope(Prestation)
   end
 
   def new
@@ -24,8 +25,8 @@ class PrestationsController < ApplicationController
   end
 
   def maintenance
-    @prestations = Prestation.all
     @prestations = Prestation.where(category: 'Entretien')
+    @prestations = policy_scope(Prestation)
   end
 
   private
